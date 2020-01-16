@@ -111,4 +111,23 @@ window.addEventListener('load', function () {
     totop.addEventListener('click', function () {
         scroll_Y(window, 0)
     })
+
+    /*************************qrcode***********************/
+    var qr_close = document.querySelector('.qr-close')
+    var qr_wraper = document.querySelector('.qr-wraper')
+    qr_close.addEventListener('click', function () {
+        qr_wraper.style.display = 'none'
+    })
+
+    /***********************service-float****************/
+    var menu_items = document.querySelectorAll('.menu-item')
+    var service_float = document.querySelector('.service-float')
+    for (var i = 0; i < menu_items.length; i++) {
+        menu_items[i].addEventListener('mouseover', function () {
+            service_float.style.display = 'block'
+        })
+        menu_items[i].addEventListener('mouseout', function () {
+            service_float.style.display = 'none'
+        })
+    }
 })
