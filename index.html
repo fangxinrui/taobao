@@ -8,6 +8,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./iconfont.css">
+    <script src="./index_basic.js"></script>
+    <script src='./index.js'></script>
 </head>
 
 <body>
@@ -288,25 +290,41 @@
                 </div>
                 <div class="core">
                     <div class="tbh-promo">
-                        <a href=""><img src="./img.alicdn.com/tfs/TB1HFM9r7T2gK0jSZFkXXcIQFXa-520-280.jpg_q90_.webp"
-                                alt=""></a>
+                        <div class="promo-box">
+                            <ul class="promo-img">
+                                <li>
+                                    <a href=""><img
+                                            src="./img.alicdn.com/tfs/TB1HFM9r7T2gK0jSZFkXXcIQFXa-520-280.jpg_q90_.webp"
+                                            alt=""></a></li>
+                                <li>
+                                    <a href=""><img
+                                            src="./img.alicdn.com/tfs/TB1bWvmrG61gK0jSZFlXXXDKFXa-520-280.jpg_q90_.webp"
+                                            alt=""></a></li>
+                                <li>
+                                    <a href=""><img
+                                            src="./img.alicdn.com/tfs/TB14BYurHY1gK0jSZTEXXXDQVXa-520-280.png_q90_.webp"
+                                            alt=""></a></li>
+                                <li>
+                                    <a href=""><img
+                                            src="./img.alicdn.com/tfs/TB1QtwKtpT7gK0jSZFpXXaTkpXa-520-280.jpg_q90_.webp"
+                                            alt=""></a></li>
+                                <li>
+                                    <a href=""><img src="./img.alicdn.com/tfs/TB1.CAmeNjaK1RjSZKzSutVwXXa.jpg"
+                                            alt=""></a>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="arrow-left">
-                            <a href="">
+                            <a>
                                 <i>
                                 </i>&lt</a>
                         </div>
                         <div class="arrow-right">
-                            <a href="">
+                            <a>
                                 <i>&gt</i>
                             </a>
                         </div>
-                        <ul class="promo-nav">
-                            <li class="selected"><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                        </ul>
+                        <ul class="promo-nav"></ul>
                         <div class="add-tag">
                             <img src="./img.alicdn.com/tfs/TB1c_LDLXXXXXXoXpXXXXXXXXXX-24-14.png" alt="">
                             <span>喜欢</span>
@@ -503,15 +521,17 @@
     </div>
     <div class="fixedtool">
         <span class="tb-ifont"></span>
-        <a href="">爱逛<br>好货</a>
-        <a href="">好店<br>直播</a>
-        <a href="">品质<br>特色</a>
-        <a href="">实惠<br>热卖</a>
-        <a href="">猜你<br>喜欢</a>
-        <a href=""><i class="tb-ifont"></i><br>顶部</a>
-        <a href="">反馈</a>
-        <a href="">暴恐<br>举报</a>
+        <a href="#" data-tool="goods">爱逛<br>好货</a>
+        <a href="#" data-tool="shop">好店<br>直播</a>
+        <a href="#" data-tool="quality">品质<br>特色</a>
+        <a href="#" data-tool="affard">实惠<br>热卖</a>
+        <a href="#" data-tool="hotsale">猜你<br>喜欢</a>
+        <a data-tool='gotop'><i class="tb-ifont"></i><br>顶部</a>
+        <a href="#">反馈</a>
+        <a href="#">暴恐<br>举报</a>
     </div>
+    <div class="tb-venues"></div>
+    <div class="layer"></div>
 </body>
 
 </html>
