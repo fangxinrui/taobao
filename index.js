@@ -123,6 +123,7 @@ window.addEventListener('load', function () {
     var menu_items = document.querySelectorAll('.menu-item')
     var service_float = document.querySelector('.service-float')
     for (var i = 0; i < menu_items.length; i++) {
+        menu_items[i].setAttribute('data-groupid', i)
         menu_items[i].addEventListener('mouseover', function () {
             service_float.style.display = 'block'
         })
@@ -130,4 +131,73 @@ window.addEventListener('load', function () {
             service_float.style.display = 'none'
         })
     }
+    service_float.addEventListener('mouseover', function () {
+        service_float.style.display = 'block'
+    })
+    service_float.addEventListener('mouseout', function () {
+        service_float.style.display = 'none'
+    })
+
+    /**********************notice-bd*********************/
+    var notice_hd_li = document.querySelectorAll('.notice-hd>li')
+    var notice_bd_ul = this.document.querySelectorAll('.notice-bd>ul')
+    for (var i = 0; i < notice_hd_li.length; i++) {
+        notice_hd_li[i].setAttribute('data-index', i)
+        notice_hd_li[i].addEventListener('mouseover', function () {
+            for (var i = 0; i < notice_hd_li.length; i++) {
+                notice_hd_li[i].classList.remove('selected')
+                notice_bd_ul[i].classList.remove('selected')
+            }
+            this.classList.add('selected')
+            idx = parseInt(this.getAttribute('data-index'))
+            notice_bd_ul[idx].classList.add('selected')
+        })
+    }
+
+    /********************conve-bd-box*******************/
+    var conve_list_float = document.querySelectorAll('.conve-float')
+    var conve_bd_box = document.querySelector('.conve-bd-box')
+    var conve_bd_items = document.querySelectorAll('.conve-bd-item')
+    console.dir(conve_list_float)
+    for (var i = 0; i < conve_list_float.length; i++) {
+        conve_list_float[i].setAttribute('data-index', i)
+        conve_bd_items[i].setAttribute('data-index', i)
+        conve_list_float[i].addEventListener('mouseover', function () {
+            for (var i = 0; i < conve_list_float.length; i++) {
+                conve_list_float[i].classList.remove('selected')
+                conve_bd_items[i].style.display = 'none'
+            }
+            this.classList.add('selected')
+            conve_bd_box.style.display = 'block'
+            item_idx = parseInt(this.getAttribute('data-index'))
+            conve_bd_items[item_idx].style.display = 'block'
+        })
+    }
+    var conve_bd_box_close = document.querySelector('.conve-bd-box-close')
+    conve_bd_box_close.addEventListener('click', function () {
+        conve_bd_box.style.display = 'none'
+        for (var i = 0; i < conve_list_float.length; i++) {
+            conve_list_float[i].classList.remove('selected')
+        }
+    })
+    var phone_tabs = document.querySelectorAll('.phone-tabs>a')
+    var phone_tabs_bd = document.querySelector('.phone-tabs-bd')
+    var tabs_flag = true
+    for (var i = 0; i < phone_tabs.length; i++) {
+        phone_tabs[i].setAttribute('data-index', i)
+        phone_tabs[i].addEventListener('mouseover', function () {
+            if (tabs_flag) {
+                tabs_flag = false
+                for (var i = 0; i < phone_tabs.length; i++) {
+                    phone_tabs[i].classList.remove('selected')
+                }
+                this.classList.add('selected')
+                idx = parseInt(this.getAttribute('data-index'))
+                animate(phone_tabs_bd, -idx * phone_tabs_bd.children[0].offsetWidth, function () {
+                    tabs_flag = true
+                })
+            }
+        })
+    }
+
 })

@@ -185,7 +185,7 @@ body a {
   cursor: pointer;
 }
 
-.search-tab ul .selected {
+.search-tab ul li.selected {
   color: #fff;
   font-weight: 700;
   background-image: linear-gradient(to right, #ff9000 0, #ff5000 100%);
@@ -556,7 +556,7 @@ body a {
   cursor: pointer;
 }
 
-.promo-nav .selected {
+.promo-nav li.selected {
   background-color: #ff5000;
 }
 
@@ -891,7 +891,11 @@ body a {
   line-height: 20px;
 }
 
-.notice-hd .selected {
+.notice-hd li a:hover {
+  color: #f40;
+}
+
+.notice-hd li.selected {
   border-bottom: 2px solid #F40;
   font-weight: 700;
   padding: 0;
@@ -906,6 +910,11 @@ body a {
   height: 50px;
   padding: 9px 0 6px 0;
   margin: 0 12px;
+  display: none;
+}
+
+.notice-bd ul.selected {
+  display: block;
 }
 
 .notice-bd ul li {
@@ -913,9 +922,10 @@ body a {
   width: 130px;
   height: 25px;
   line-height: 25px;
+  overflow: hidden;
 }
 
-.notice-bd ul li:first-child {
+.notice-bd ul:first-child li:first-child {
   width: 260px;
 }
 
@@ -924,6 +934,7 @@ body a {
   height: 154px;
   background-color: #fff;
   border-top: 1px solid #f4f4f4;
+  position: relative;
 }
 
 .conve-list li {
@@ -934,6 +945,14 @@ body a {
   border-left-color: transparent;
   border-top-color: transparent;
   cursor: pointer;
+  position: relative;
+  z-index: 0;
+}
+
+.conve-list li.selected {
+  border-color: #f40;
+  border-bottom-color: #fff;
+  z-index: 12;
 }
 
 .conve-list .min {
@@ -994,6 +1013,146 @@ body a {
   text-align: center;
   line-height: 24px;
 }
+
+.conve-bd-box {
+  width: 288px;
+  height: 156px;
+  border: 1px solid #f40;
+  position: absolute;
+  top: 76px;
+  left: 0;
+  z-index: 10;
+  display: block;
+  overflow: hidden;
+}
+
+.conve-bd-box-close {
+  width: 18px;
+  height: 18px;
+  display: block;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  border: 1px solid red;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+  z-index: 20;
+}
+
+
+.conve-container {
+  width: 278px;
+  height: 155px;
+  padding-left: 15px;
+  padding-top: 4px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #fff;
+}
+
+.tab-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.tabs {
+  width: 278px;
+  height: 26px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.tabs a {
+  padding: 3px 10px;
+  line-height: 26px;
+  color: #666;
+  cursor: pointer;
+}
+
+.tabs a.selected {
+  color: #FF4300;
+}
+
+.tabs-bd {
+  width: 9999px;
+  height: 116px;
+  position: absolute;
+  top: 26px;
+  left: 0;
+  z-index: 10;
+}
+
+.tbr-phone,
+.tbr-traffic,
+.tbr-fixedline,
+.tbr-broadband {
+  padding-top: 4px;
+  width: 300px;
+  float: left;
+}
+
+.conve-input {
+  border: 1px solid #ccc;
+  width: 188px;
+  height: 24px;
+  line-height: 24px;
+  margin-top: -1px;
+}
+
+.tbr-block {
+  margin: 6px 0;
+  height: 16px;
+}
+
+.tbr-block-hd,
+.tbr-block-bd {
+  color: #666;
+  float: left;
+  line-height: 16px;
+}
+
+.tbr-block-hd {
+  margin-right: 1px;
+  width: 32px;
+  text-align: center;
+}
+
+.tbr-price span {
+  margin-right: 4px;
+  line-height: 16px;
+}
+
+.tbr-price strong {
+  color: #f60;
+  font-weight: 700;
+  font-family: verdana, arial;
+  line-height: 16px;
+}
+
+.tbr-buy {
+  margin-bottom: 6px;
+}
+
+.tbr-buy a {
+  display: inline-block;
+  background-color: #f40;
+  color: #fff;
+  height: 21px;
+  padding: 3px 10px;
+  margin-right: 10px;
+  font-weight: 700;
+  line-height: 21px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+
 
 .tbh-app {
   width: 290px;
