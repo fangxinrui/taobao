@@ -1022,7 +1022,7 @@ body a {
   top: 76px;
   left: 0;
   z-index: 10;
-  display: block;
+  display: none;
   overflow: hidden;
 }
 
@@ -1197,11 +1197,41 @@ body a {
   height: 32px;
   margin: 0 21px 8px 0;
   float: left;
+  position: relative;
 }
 
-.tbh-app li img {
+.tbh-app .app-icon {
   width: 32px;
   height: 32px;
+}
+
+.tbh-app .app-qr {
+  display: none;
+  position: absolute;
+  top: -111px;
+  left: -32px;
+  border: 1px solid #dedede;
+  background-color: #fff;
+  width: 90px;
+  height: 102px;
+  text-align: center;
+}
+
+.tbh-app .app-qr img {
+  width: 66px;
+  height: 66px;
+  padding: 12px;
+}
+
+.tbh-app .app-qr p {
+  width: 90px;
+  height: 20px;
+  position: absolute;
+  top: 79px;
+  left: 0;
+  color: #666;
+  line-height: 20px;
+  text-align: center;
 }
 
 .fixedtool {

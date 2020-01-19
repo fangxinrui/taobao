@@ -199,5 +199,16 @@ window.addEventListener('load', function () {
             }
         })
     }
-
+    /*****************************tbh-app***********************/
+    var tbh_app_li = document.querySelectorAll(".tbh-app>ul>li")
+    for (var i = 0; i < tbh_app_li.length; i++) {
+        tbh_app_li[i].addEventListener('mouseover', function () {
+            app_qr = this.querySelector(".app-qr")
+            app_qr.style.display = 'block'
+        })
+        tbh_app_li[i].addEventListener('mouseout', function () {
+            app_qr = this.querySelector(".app-qr")
+            app_qr.style.display = 'none'
+        })
+    }
 })
