@@ -544,6 +544,7 @@ body a {
   transform: translateX(-50%);
   top: 252px;
   z-index: 10;
+  border-radius: 10px;
 }
 
 .promo-nav li {
@@ -1320,7 +1321,6 @@ body a {
 .tb-venues {
   width: 1190px;
   height: 92px;
-  background-color: cyan;
   margin: auto;
 }
 
